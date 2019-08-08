@@ -15,3 +15,4 @@ Route::get('/', function () {
 Route::resource('/events','EventController');
 Route::get('/addeventurl','EventController@display');
 Route::post('/addeventurl','EventController@guardar');
+Route::delete('/addeventurl/{id}','EventController@destroy')->name('Borrar');

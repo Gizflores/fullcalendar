@@ -17,6 +17,13 @@
        <div class="jumbotron">
         <div class="row">
         <a href="/addeventurl" class="btn btn-dark">Add Events</a>
+       
+            <form method="post" action="{{route('Borrar', $id=3)}}">
+               {{csrf_field()}} 
+               @method('delete')
+               <button type="submit" class="btn btn-secundary">Dlt Events</button>
+               
+            </form>
         </div>
     <br/>
     <br/>

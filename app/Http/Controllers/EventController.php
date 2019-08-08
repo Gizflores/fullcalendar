@@ -104,6 +104,9 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $events = Event::find($id); 
+        $events->delete(); //delete the client
+        
+        return redirect('events')->with('success','Evento eliminado');
     }
 }
